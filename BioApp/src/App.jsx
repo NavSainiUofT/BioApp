@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, redirect, Route, Routes } from 'react-router-dom';
 
 import Header from './components/header'
 
