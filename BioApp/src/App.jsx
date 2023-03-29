@@ -1,17 +1,28 @@
 import { useState } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import Header from './components/header'
+
+import Home from './pages/home';
+import About from './pages/about';
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col">
-          <h1>test</h1>
-        </div>
-      </div>
-    </div>
+    <>
+      
+
+      <BrowserRouter>
+      <Header></Header>
+        <Routes>
+            <Route index element={<Home />} />
+            <Route path="/about" element={<About />} />
+        </Routes>
+      </BrowserRouter>
+    </>
+
+
   )
 }
 
